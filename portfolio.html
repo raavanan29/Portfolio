@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravindrakumar Singram Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- AOS CSS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">\
+	<style>/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    padding-top: 70px; /* To avoid overlap with the fixed navbar */
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Home Section */
+#home {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    height: 100vh;
+    background-blend-mode: darken;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+}
+
+#home p {
+    font-size: 1.5rem;
+}
+
+#home .btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+
+/* Profile Section */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+
+/* Experience Cards */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h4, .card h5, .card h6 {
+    font-weight: bold;
+}
+
+/* Projects Section */
+#projects .card {
+    border: none;
+}
+
+#projects .card-body {
+    text-align: center;
+}
+
+/* Skills Section */
+#skills .col-md-3 {
+    margin-bottom: 30px;
+}
+
+#skills i {
+    color: #007bff;
+}
+
+#skills h5 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+form input, form textarea {
+    border: 2px solid #007bff;
+}
+
+form input:focus, form textarea:focus {
+    box-shadow: none;
+    border-color: #0056b3;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Animations */
+[data-aos="fade-up"], [data-aos="fade-right"], [data-aos="fade-left"], [data-aos="zoom-in"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Ravindrakumar Singaram Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="vh-100 d-flex align-items-center justify-content-center text-center bg-dark text-white" style="background-image: url('devops-bg.jpg'); background-size: cover;">
+        <div class="container">
+            <h1 class="display-3 animate_animated animate_fadeInDown">DevOps Engineer</h1>
+            <p class="lead animate_animated animate_fadeInUp">Automating Infrastructure | CI/CD Pipelines | Cloud Solutions</p>
+            <a href="#about" class="btn btn-primary btn-lg mt-4">Discover More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center" data-aos="fade-up">
+            <h2 class="section-title">Profile</h2>
+            <img src="C:\Users\Mr. Raavanan\Downloads\WhatsApp Image 2024-10-05 at 05.43.27.jpeg" alt="Profile Photo" class="profile-photo rounded-circle shadow-lg my-4">
+            <p class="text-muted">I am a Senior DevOps Engineer with experience in designing scalable, reliable infrastructure, optimizing CI/CD pipelines, and building automation tools that reduce operational complexity. Passionate about cloud technologies and infrastructure as code (IaC).</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Work Experience</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4>Senior DevOps Engineer</h4>
+                            <h5>Nuvento</h5>
+							<h5>May 2022–Nov 2023</h5>
+							<h5>Project: EduHealth</h5>
+							<p align="justify">Managed a team of security experts to ensure the security of AWS cloud environments, overseeing incident response, threat detection, and vulnerability management.</p>
+<p align="justify">Adept at developing, implementing, and managing robust security strategies by enhancing security postures across diverse industries.</p>
+<p align="justify">Implemented advanced cloud security controls, including zero trust network architectures, and secure container orchestration (Kubernetes).</p>
+<p align="justify">Established a robust DevSecOps culture by integrating security into the CI/CD pipeline, resulting in faster and more secure application deployments.</p>
+<p align="justify">Collaborated with legal and compliance teams to ensure adherence to global data privacy regulations, such as GDPR.</p>
+<p align="justify">Conducted threat modeling exercises to identify and prioritize security risks.</p>
+<p align="justify">Provided cloud security training to employees.</p>
+<p align="justify">Contribute to the development of cloud-based solution blueprints, roadmaps, and architectures.</p>
+<p align="justify">Engage with marketing and sales teams to promote the practice's capabilities and generate new business opportunities.</p>
+<p align="justify">Collaborate with other departments within the organization to ensure seamless integration of cloud solutions with existing IT infrastructure and business processes.</p>
+<p align="justify">Designing and implementing robust CI/CD pipelines using Jenkins, resulting in streamlined software delivery.</p>
+<p align="justify">Developed and maintained CI/CD pipelines using Jenkins, automating software delivery processes for increased efficiency.</p>
+<p align="justify">Hands-on experience with Linux systems, including system administration, and maintenance.</p>
+<p align="justify">Experience in Infrastructure as Code tools such as Terraform.</p>
+<p align="justify">Strong teamwork and communication skills to work effectively in cross-functional teams.</p>
+<p align="justify">Experience with Terraform and Infrastructure as Code methodologies, enabling the provisioning and management of infrastructure resources as code.</p>
+<p align="justify">Collaborated with the tech team to design and implement solutions for customer identity and access management.</p>
+<p align="justify">Successfully customized Azure AD and Azure AD solutions to meet specific business needs, ensuring a seamless user experience.</p>
+<p align="justify">Worked in Agile DevOps enabling working environment using JIRA to track issues and change Management.</p>
+<p align="justify">Worked with Microsoft Azure, mapping the JIRA to GIT for branching and merge.</p>
+<p align="justify">Integrated sonarqube with azure pipeline to check-in done by developers.
+</p>
+                            <p>Developed scalable cloud infrastructure using AWS. Automated continuous deployment pipelines using Jenkins and Docker, reducing deployment times by 70%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4>DevOps Engineer</h4>
+                            <h5>SRM Technologies</h5>
+							<h5>June 2018–Apr 2022</h5>
+							<h5>Project: Heritge Foods</h5>
+                            <p align="justify">Demonstrated ability to solve problems using Python programming, showcasing logical thinking and algorithmic problem-solving skills.</p>
+<p align="justify">Experience in writing and executing Python scripts for various tasks, such as automation or data manipulation.</p>
+<p align="justify">Basic knowledge of Python libraries and frameworks, including but not limited to NumPy, Pandas, and Flask.</p>
+<p align="justify">Worked in Agile DevOps enabling working environment using JIRA to track issues and change Management.</p>
+<p align="justify">Experience in the provisioning Cloud Infrastructure using Amazon Web Services.</p>
+<p align="justify">Created Three-tier architecture in AWS using services like EC2, S3, EFS, IAM, Load Balancer, Auto Scaling, VPC, Route 53, Cloud Front, CloudWatch, RDS.</p>
+<p align="justify">Created S3 buckets and S3 life cycle management for old data's and logs. Also adding EBS and EFS whenever required.</p>
+<p align="justify">Experience on VPC peering & NAT Gateway for application servers hosted on private subnets.</p>
+<p align="justify">Created messaging services for serverless applications using Lambda & SNS.</p>
+<p align="justify">Experience on CI/ CD workflow using Code Deploy & Code Pipeline.</p>
+<p align="justify">Written TerraForm code for building Cloud Infrastructure. Automated builds workflow using TerraForm. Knowledge on CloudFormation.</p>
+<p align="justify">Good Experience with Version Control System such as Git, Administrating source code management by GitHub repository.</p>
+<p align="justify">Created branches, tags and handled merge conflict using Git merge tool.</p>
+<p align="justify">Experience on implementing CI/ CD pipeline using Jenkins and running jobs on slave machine using Master Slave Connection.</p>
+<p align="justify">Automated build jobs and deployment process with Jenkins.</p>
+<p align="justify">Written Docker File to build Docker Images to run them as Docker Containers.</p> Built and deployed Docker containers for implementing micro services architecture from monolithic architecture.</p>
+<p align="justify">Knowledge on Application Monitoring Tools like CloudWatch on AWS.</p>
+<p align="justify">Knowledge on Log Monitoring Tools like CloudTrail on AWS.</p>
+<p align="justify">Hands-on knowledge on SonarQube for code quality check.</p>
+<p align="justify">Good Experience in Operating systems like Windows & Linux commands.
+</p>
+                        </div>
+						<div class="col-md-7" data-aos="fade-left">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4>Desktop Support</h4>
+                            <h5>Cloudi5</h5>
+							<h5>November 2016–May 2018</h5>
+							<h5>Project: Safal Technologies</h5>
+                            <p align="justify">Involved in deployment activities.</p>
+<p align="justify">Involved in resolving customer problems like tickets/ incident for the application using Service Now.</p>
+<p align="justify">Managing website and application hosting on the server.</p>
+<p align="justify">Deploying various WAR files in server.</p>
+<p align="justify">Managing security of the server, working on server administration.</p>
+<p align="justify">Observation while deploying the application in SIT, UAT and pre-Production.</p>
+<p align="justify">Handled incident Control Bridge for any issues raised in the application.</p>
+<p align="justify">Involved in the Health check for the application on daily basis.</p>
+<p align="justify">Have continually lead, facilitate, and coordinate synchronized releases by using the program to maximize value delivered to their Customers.</p>
+<p align="justify">Managing and configuration of AWS related services.</p>
+<p align="justify">Knowledge in configuration and managing Linux Virtual Machines.</p>
+<p align="justify">Performing Linux administration duties including installation, maintenance.</p>
+<p align="justify">Troubleshoot various issues on Linux Web/Email servers quickly and efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Projects</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4>CI/CD Pipeline Automation</h4>
+                            <p>Created fully automated CI/CD pipelines using Jenkins, Docker, and Kubernetes, reducing deployment errors by 60%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4>Cloud Infrastructure Automation</h4>
+                            <p>Automated AWS infrastructure provisioning using Terraform, significantly reducing manual configurations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4>Real-Time Monitoring System</h4>
+                            <p>Deployed Cloudwatch, Prometheus and Grafana for real-time monitoring and alerting across multi-cloud environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Skills</h2>
+            <div class="row text-center">
+                <div class="col-md-3" data-aos="flip-left">
+                    <i class="fab fa-docker fa-3x mb-3"></i>
+                    <h5>Docker & Kubernetes</h5>
+                </div>
+                <div class="col-md-3" data-aos="flip-left">
+                    <i class="fab fa-aws fa-3x mb-3"></i>
+                    <h5>AWS Cloud</h5>
+                </div>
+                <div class="col-md-3" data-aos="flip-left">
+                    <i class="fas fa-code fa-3x mb-3"></i>
+                    <h5>CI/CD Pipelines</h5>
+                </div>
+				<div class="col-md-3" data-aos="flip-left">
+                    <i class="fas fa-code fa-3x mb-3"></i>
+                    <h5>Jenkins</h5>
+                </div>
+                <div class="col-md-3" data-aos="flip-left">
+                    <i class="fas fa-terminal fa-3x mb-3"></i>
+                    <h5>Linux and Windows Administration</h5>
+                </div>
+				<div class="col-md-3" data-aos="flip-left">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h5>Cloud Security</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Education</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8" data-aos="fade-right">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4>Bachelor of Science in Information Technology</h4>
+                            <h5>Sree Saraswathi Thiyagaraja College, Pollachi</h5>
+                            <p>2013-2016</p>
+                        </div>
+						<div class="card-body">
+                            <h4>HSC</h4>
+                            <h5>Palani Gounder Higher Secondary School, Pollachi</h5>
+                            <p>2013</p>
+                        </div>
+						<div class="card-body">
+                            <h4>SSLC</h4>
+                            <h5>Our Lady of Lourdes Matriculation Higher Secondary School, Pollachi</h5>
+                            <p>2011</p>
+                        </div>
+						</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Contact</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form data-aos="zoom-in">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Ravindrakumar Singaram Portfolio. All Rights Reserved.</p>
+		    <p align="justify">Email: ravindrakumarsingaram1996@gmail.com</p>
+        <p align="justify">Phone: 9344545906</p>
+            <div class="social-icons">
+                <a href="https://github.com/your-github" target="_blank" class="text-white mx-2"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your-email@example.com" class="text-white mx-2"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Library for animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS animations
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+	<script>// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Optional: Form submission handler (mockup)
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("Form submitted successfully!");
+});
+</script>
+</body>
+</html>
